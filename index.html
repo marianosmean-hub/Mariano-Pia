@@ -1,48 +1,147 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mariano Cacace - Smean Ltd Spa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mariano Cacace — Smean Ltd Spa</title>
+
+  <!-- Manifest / PWA (già presenti nel repo) -->
+  <link rel="manifest" href="app.webmanifest">
+  <meta name="theme-color" content="#16a34a">
+
+  <!-- Icone già presenti -->
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+  <link rel="icon" sizes="512x512" href="icon-512.png">
+
+  <!-- CSS principale -->
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Extra minimi per questa pagina (il resto è in styles.css) */
+    .header {
+      margin-bottom: 18px;
+    }
+    .title {
+      font-size: 28px;
+      margin: 0 0 6px;
+      color: #0f172a;
+    }
+    .subtitle {
+      margin: 0 0 14px;
+      color: #475569;
+      font-weight: 600;
+    }
+    .contacts p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+    .contacts a { color: #16a34a; text-decoration: none; }
+    .contacts a:hover { text-decoration: underline; }
+
+    .buttons {
+      display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0 6px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 14px; border-radius: 10px; font-weight: 600;
+      background:#eafaf0; color:#065f46; border:1px solid #bbf7d0; text-decoration:none;
+    }
+    .btn:hover { filter: brightness(0.97); }
+
+    .categories { margin-top: 18px; text-align:left; }
+    .categories h3 { margin: 0 0 10px; color:#0f172a; }
+    .grid {
+      display:grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr));
+      gap:12px;
+    }
+    .cat {
+      background:#ffffff; border:1px solid #e2e8f0; border-radius:12px;
+      padding:10px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.03);
+    }
+    .cat img {
+      width:100%; height:90px; object-fit:cover; border-radius:8px; margin-bottom:8px;
+    }
+    .whatsapp-fab{
+      position: fixed; right: 18px; bottom: 18px; z-index: 50;
+      display: inline-flex; align-items:center; gap:10px;
+      background:#22c55e; color:#fff; padding:12px 16px; border-radius:999px;
+      box-shadow: 0 10px 20px rgba(34,197,94,.35); text-decoration:none; font-weight:700;
+    }
+    .whatsapp-fab:hover{ filter: brightness(0.95); }
+    .fab-icon{
+      width:22px;height:22px;border-radius:4px;background:#fff;display:inline-block;
+      mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="black" d="M19.11 17.34c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.62.14-.18.27-.71.88-.87 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.48-.85-2.03-.22-.53-.45-.46-.62-.46-.16 0-.34-.02-.52-.02-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.28 0 1.34.98 2.63 1.11 2.81.14.18 1.93 2.95 4.67 4.03.65.28 1.16.45 1.56.58.65.21 1.23.18 1.69.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32zM16.03 4C9.93 4 5 8.93 5 15.02c0 1.94.52 3.76 1.41 5.33L5 27l6.8-1.78c1.53.84 3.29 1.32 5.17 1.32C22.07 26.54 27 21.61 27 15.52 27 9.43 22.13 4 16.03 4z"/></svg>') center/contain no-repeat;
+    }
+    .tiny-note { margin-top:12px; font-size:12px; color:#64748b; }
+  </style>
 </head>
 <body>
 
   <div class="card">
-    <img src="img/profilo.jpg" alt="Foto profilo" class="profile-img">
-    <h1>Mariano Cacace</h1>
-    <h2>Rappresentante commerciale — Smean Ltd Spa</h2>
+    <div class="header">
+      <img src="profilo.jpg" alt="Foto profilo" class="profile-img"
+           onerror="this.style.display='none'">
+      <h1 class="title">Mariano Cacace</h1>
+      <p class="subtitle">Rappresentante commerciale — Smean Ltd Spa</p>
+    </div>
 
-    <p>📞 <a href="tel:+393355680659">335 568 0659</a></p>
-    <p>✉️ <a href="mailto:mariano.smean@gmail.com">mariano.smean@gmail.com</a></p>
+    <div class="contacts">
+      <p>📞 <a href="tel:+393355680659">335 568 0659</a></p>
+      <p>✉️ <a href="mailto:mariano.smean@gmail.com">mariano.smean@gmail.com</a></p>
 
-    <a class="whatsapp" href="https://wa.me/393355680659" target="_blank">
-      💬 Scrivimi su WhatsApp
-    </a>
-
-    <a class="catalogo" href="catalogo.pdf" target="_blank">
-      📘 Catalogo completo
-    </a>
-  </div>
-
-  <div class="categorie">
-    <h3>Le nostre categorie</h3>
-    <div class="grid">
-      <div class="item">
-        <img src="img/categoria1.jpg" alt="Categoria 1">
-        <p>Categoria 1</p>
+      <div class="buttons">
+        <a class="btn" href="https://wa.me/393355680659" target="_blank" rel="noopener">
+          💬 Scrivimi su WhatsApp
+        </a>
+        <a class="btn" href="catalogo.pdf" target="_blank" rel="noopener">
+          📘 Catalogo completo
+        </a>
       </div>
-      <div class="item">
-        <img src="img/categoria2.jpg" alt="Categoria 2">
-        <p>Categoria 2</p>
+    </div>
+
+    <div class="categories">
+      <h3>Le nostre categorie</h3>
+      <div class="grid">
+        <div class="cat">
+          <img src="img/categoria1.jpg" alt="Categoria 1"
+               onerror="this.src='icon-192.png'">
+          <strong>Categoria 1</strong>
+        </div>
+        <div class="cat">
+          <img src="img/categoria2.jpg" alt="Categoria 2"
+               onerror="this.src='icon-192.png'">
+          <strong>Categoria 2</strong>
+        </div>
+        <div class="cat">
+          <img src="img/categoria3.jpg" alt="Categoria 3"
+               onerror="this.src='icon-192.png'">
+          <strong>Categoria 3</strong>
+        </div>
+        <div class="cat">
+          <img src="img/categoria4.jpg" alt="Categoria 4"
+               onerror="this.src='icon-192.png'">
+          <strong>Categoria 4</strong>
+        </div>
       </div>
-      <div class="item">
-        <img src="img/categoria3.jpg" alt="Categoria 3">
-        <p>Categoria 3</p>
-      </div>
+
+      <p class="tiny-note">Suggerimento: carica le immagini in <code>img/</code> con i nomi
+        <code>categoria1.jpg</code>, <code>categoria2.jpg</code>, ecc. Se non ci sono, verrà mostrata l’icona.</p>
     </div>
   </div>
 
+  <!-- Pulsante WhatsApp flottante -->
+  <a class="whatsapp-fab" href="https://wa.me/393355680659" target="_blank" rel="noopener">
+    <span class="fab-icon"></span> WhatsApp
+  </a>
+
+  <!-- Registrazione service worker (se presente sw.js) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(()=>{});
+      });
+    }
+  </script>
 </body>
 </html>
+
+
