@@ -1,0 +1,20 @@
+name: Unzip site
+on:
+  workflow_dispatch: {}
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unzip files
+        run: |
+          sudo apt-get update && sudo apt-get install -y unzip
+          unzip -o mariano_github_ready.zip -d .
+          rm -f mariano_github_ready.zip
+      - name: Commit extracted files
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          message: "Unzip site files"
+          default_author: github_actions
