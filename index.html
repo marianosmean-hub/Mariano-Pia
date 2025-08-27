@@ -1,55 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mariano Cacace — Smean Ltd Spa</title>
-  <meta name="description" content="Mariano Cacace — Rappresentante commerciale Smean Ltd Spa. Contatti rapidi, WhatsApp, email e PWA.">
-  <link rel="manifest" href="app.webmanifest">
-  <meta name="theme-color" content="#1C75BC">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariano Cacace - Smean Ltd Spa</title>
   <style>
-    :root{--brand:#1C75BC;--bg:#EFF1F4;--ink:#2B3440;--card:#fff;--edge:#e1e6ec;--wa:#25D366;}
-    *{box-sizing:border-box} body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
-    .wrap{max-width:980px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;gap:12px;margin:12px 0 20px}
-    .logo{width:40px;height:40px;border-radius:10px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800}
-    .card{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:20px;margin-bottom:16px}
-    .cta{display:inline-block;background:var(--wa);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
-    .floating-whatsapp{position:fixed;right:16px;bottom:16px;background:var(--wa);color:#fff;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 6px 14px rgba(0,0,0,.25);z-index:9999;text-decoration:none}
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('sfondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+    .content {
+      margin-top: 20%;
+      background: rgba(255, 255, 255, 0.7);
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    p {
+      margin: 5px 0;
+    }
+    a {
+      color: green;
+      font-weight: bold;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">MC</div>
-      <div>
-        <h1 style="margin:0">Mariano Cacace</h1>
-        <div>Rappresentante commerciale — Smean Ltd Spa</div>
-      </div>
-    </header>
-
-    <section class="card">
-      <h2 style="margin-top:0">Contatti</h2>
-      <p><strong>Telefono:</strong> <a href="tel:3355680659">335 568 0659</a><br/>
-         <strong>Email:</strong> <a href="mailto:mariano.smean@gmail.com">mariano.smean@gmail.com</a></p>
-      <p>
-        <a class="cta" href="https://wa.me/393355680659" target="_blank" rel="noopener">💬 Scrivimi su WhatsApp</a>
-      </p>
-    </section>
-
-    <section class="card">
-      <h2 style="margin-top:0">Catalogo Smean</h2>
-      <p>Consulta il flipbook interattivo dei prodotti:</p>
-      <p><a href="https://www.sfogliami.it/flip.asp?sc=lhavnjhbkkhcpl9rd64l06mu4i1m1du8&ID=149298" target="_blank" rel="noopener">Apri il catalogo completo</a></p>
-    </section>
+  <div class="content">
+    <h1>Mariano Cacace</h1>
+    <p>Rappresentante commerciale — Smean Ltd Spa</p>
+    <p>📞 <a href="tel:+393355680659">335 568 0659</a></p>
+    <p>📧 <a href="mailto:mariano.smean@gmail.com">mariano.smean@gmail.com</a></p>
+    <p>📘 <a href="https://mariano-pia.netlify.app">Catalogo completo</a></p>
   </div>
-
-  <a class="floating-whatsapp" href="https://wa.me/393355680659" target="_blank" rel="noopener" aria-label="Chat su WhatsApp">💬</a>
-
-  <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(()=>{}); });
-  }
-  </script>
 </body>
 </html>
