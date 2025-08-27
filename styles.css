@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 10px 0 5px;
+}
+
+h2 {
+  margin: 5px 0 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+a[href^="tel"] {
+  color: #d9534f;
+}
+
+a[href^="mailto"] {
+  color: #0275d8;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white !important;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.catalogo {
+  background: #007bff;
+  color: white !important;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.categorie {
+  margin-top: 30px;
+}
+
+.categoria {
+  display: inline-block;
+  width: 120px;
+  margin: 10px;
+  text-align: center;
+}
+
+.categoria img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
