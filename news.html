@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News - Mariano Cacace</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "SOSTITUISCI_CON_TUO_APP_ID",
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>News & Aggiornamenti</h1>
+    <a href="index.html">⬅ Torna alla Home</a>
+  </header>
+
+  <main id="news-container">
+    <p>Caricamento news...</p>
+  </main>
+
+  <script>
+    fetch('news/posts.json')
+      .then(response => response.json())
+      .then(posts => {
+        const container = document.getElementById('news-container');
+        container.innerHTML = '';
+        posts.forEach(post => {
+          const card = document.createElement('div');
+          card.innerHTML = `
+            <h2>${post.title}</h2>
+            <small>${post.date} | ${post.tag}</small>
+            <p>${post.excerpt}</p>
+            <a href="${post.url}" target="_blank">Leggi di più</a>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
