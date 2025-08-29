@@ -1,32 +1,156 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mariano Cacace - Rappresentante Commerciale</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mariano Cacace — Rappresentante Commerciale</title>
+  <meta name="description" content="Mariano Cacace — Rappresentante commerciale Smean LTD S.p.A. Sopralluoghi, consulenza e attrezzature a noleggio e vendita." />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Mariano Cacace</h1>
-    <p>Rappresentante Commerciale - Smean LTD S.p.A.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="news.html">News</a>
-    </nav>
+  <header class="hero">
+    <img src="img/profilo.jpg" alt="Foto profilo di Mariano Cacace" class="avatar"
+         onerror="this.src='img/placeholder-profile.jpg'" loading="lazy" />
+    <div class="hero__text">
+      <h1>Mariano Cacace</h1>
+      <p class="role">Rappresentante commerciale — Smean LTD S.p.A.</p>
+
+      <nav class="topnav">
+        <a href="#home">Home</a>
+        <a href="#prodotti">Prodotti</a>
+        <a href="#cantieri">I nostri cantieri</a>
+        <a href="#news">News</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+
+      <p class="intro" id="home">
+        Con oltre 20 anni di esperienza, mi occupo della parte commerciale, dei sopralluoghi e della consulenza per Smean LTD S.p.A.
+      </p>
+
+      <a class="btn btn--primary" target="_blank" rel="noopener"
+         href="https://www.sfogliami.it/flip.asp?sc=lhavnjhbkkhcpl9rd64l06mu4i1m1du8&ID=149298">
+        📘 Apri Catalogo Interattivo
+      </a>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Benvenuti</h2>
-      <p>Con oltre 20 anni di esperienza, mi occupo della parte commerciale, sopralluoghi e consulenze per Smean LTD S.p.A.</p>
-      <a href="https://www.sfogliami.it/flip.asp?sc=lhavnjhbkkhcpl9rd64l06mu4i1m1du8&ID=149298" target="_blank">📘 Apri Catalogo Interattivo</a>
+  <main class="grid">
+    <!-- Colonna sinistra -->
+    <section class="card" aria-labelledby="chi-sono">
+      <h2 id="chi-sono">Chi sono</h2>
+      <ul class="bullet">
+        <li><strong>Sopralluogo gratuito</strong> presso il tuo cantiere</li>
+        <li><strong>Consiglio sull’attrezzatura</strong> più adatta al lavoro</li>
+        <li><strong>Valutazione dei costi</strong> già in fase di sopralluogo</li>
+      </ul>
+
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.sfogliami.it/flip.asp?sc=lhavnjhbkkhcpl9rd64l06mu4i1m1du8&ID=149298">
+        Apri Catalogo Interattivo
+      </a>
+    </section>
+
+    <section class="card" aria-labelledby="cantieri">
+      <h2 id="cantieri">I nostri cantieri</h2>
+      <div id="cantieri-grid" class="media-grid" aria-live="polite"></div>
+      <p class="tiny">Aggiorna le foto da <code>data/cantieri.json</code>.</p>
+    </section>
+
+    <section class="card" aria-labelledby="testimonianze">
+      <h2 id="testimonianze">Testimonianze</h2>
+      <div class="testi">
+        <blockquote>
+          <p>«Mariano è un vero professionista! Consigliato al 100%.»</p>
+          <footer>Laura Bianchi — Edilizia Roma</footer>
+        </blockquote>
+        <blockquote>
+          <p>«Ottimo servizio e consulenza. Sempre disponibile!»</p>
+          <footer>Luigi Rossi — Costruzioni Mitan</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Colonna destra -->
+    <section class="card" aria-labelledby="prodotti">
+      <h2 id="prodotti">Prodotti</h2>
+      <div class="media-grid">
+        <figure>
+          <img src="img/piattaforme.jpg" alt="Piattaforme aeree"
+               onerror="this.src='img/placeholder.jpg'" loading="lazy"/>
+          <figcaption>Piattaforme aeree</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ragni.jpg" alt="Ragni cingolati"
+               onerror="this.src='img/placeholder.jpg'" loading="lazy"/>
+          <figcaption>Ragni cingolati</figcaption>
+        </figure>
+        <figure>
+          <img src="img/gru.jpg" alt="Gru"
+               onerror="this.src='img/placeholder.jpg'" loading="lazy"/>
+          <figcaption>Gru</figcaption>
+        </figure>
+        <figure>
+          <img src="img/cestelli.jpg" alt="Cestelli"
+               onerror="this.src='img/placeholder.jpg'" loading="lazy"/>
+          <figcaption>Cestelli</figcaption>
+        </figure>
+        <figure>
+          <img src="img/ponteggi.jpg" alt="Ponteggi e ponti mobili"
+               onerror="this.src='img/placeholder.jpg'" loading="lazy"/>
+          <figcaption>Ponteggi / Ponti mobili</figcaption>
+        </figure>
+        <figure>
+          <img src="img/generatori.jpg" alt="Generatori"
+               onerror="this.src='img/placeholder.jpg'" loading="lazy"/>
+          <figcaption>Generatori</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="news">
+      <h2 id="news">News</h2>
+      <ul id="news-list" class="news" aria-live="polite"></ul>
+      <p class="tiny">Gestisci le novità da <code>data/news.json</code>.</p>
+    </section>
+
+    <section class="card" aria-labelledby="contatti">
+      <h2 id="contatti">Contatti</h2>
+
+      <div class="contact-list">
+        <p>📧 <a href="mailto:mariano.smean@gmail.com">mariano.smean@gmail.com</a></p>
+        <p>📞 <a href="tel:+393355680659">335 568 0659</a></p>
+      </div>
+
+      <div class="social">
+        <a class="ico" href="https://wa.me/393355680659" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <!-- WhatsApp SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="#25D366" d="M20.5 3.5A11 11 0 0 0 3.4 20.4L2 22l1.7-.4A11 11 0 1 0 20.5 3.5Z"/><path fill="#fff" d="M16.5 13.8c-.2.6-1.2 1.1-1.7 1.1-.4 0-.8 0-2.6-1-2.2-1.3-3.6-3.2-3.7-3.3-.1-.1-.9-1.2-.9-2s.6-1.2.8-1.4c.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .4.3.1.3.5 1.2.5 1.3s0 .3-.1.4l-.3.5c-.1.1-.2.3 0 .6.2.3.8 1.3 1.9 2.1 1.3.9 2.2 1.1 2.5 1.2.3 0 .5 0 .6-.2l.6-.7c.1-.2.3-.2.5-.1.2.1 1.2.6 1.4.7.2.1.3.1.3.2.2.3.2.9 0 1.2z"/></svg>
+        </a>
+
+        <a class="ico" href="https://www.tiktok.com/@marianocacace2" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#000" d="M13 3h3a5 5 0 0 0 4 4v3a8 8 0 1 1-7-7z"/><path fill="#25D366" opacity=".2" d="M9 12a4 4 0 0 1 4-4v3a2 2 0 1 0 2 2h3a5 5 0 1 1-9 3z"/></svg>
+        </a>
+
+        <a class="ico" href="https://instagram.com/cacacemariano87" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="28" height="28"><defs><linearGradient id="ig" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#F58529"/><stop offset=".3" stop-color="#DD2A7B"/><stop offset=".6" stop-color="#8134AF"/><stop offset="1" stop-color="#515BD4"/></linearGradient></defs><path fill="url(#ig)" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm5 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6-.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+        </a>
+
+        <a class="ico" href="https://www.facebook.com/share/15uD2EBbNt/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#1877F2" d="M22 12A10 10 0 1 0 10 22V14H7v-3h3V8.5C10 5.6 11.6 4 14.2 4h2.8v3h-2c-1 0-1 .4-1 1V11h3.1l-.5 3H14v8a10 10 0 0 0 8-10z"/></svg>
+        </a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>📧 mariano.smean@gmail.com | 📱 3355680659</p>
-    <a href="https://wa.me/393355680659" target="_blank">💬 WhatsApp</a>
+  <!-- Pulsante WhatsApp flottante -->
+  <a href="https://wa.me/393355680659" class="wa-fab" aria-label="Scrivimi su WhatsApp" target="_blank" rel="noopener">✚</a>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> Mariano Cacace — Smean LTD S.p.A.</small>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
